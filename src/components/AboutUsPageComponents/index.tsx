@@ -1,5 +1,7 @@
 function AboutUsPageComponents() {
-  return <main>about us page</main>;
+  // const { t } = useTranslation();
+
+  return <div></div>;
 }
 
 export default AboutUsPageComponents;

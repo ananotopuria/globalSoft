@@ -39,5 +39,29 @@
       "privacy": "Privacy Policy",
       "deletion": "Data Deletion Policy"
     }
+  },
+  "pages": {
+    "whatWeDo": {
+      "title": "What We Are Doing",
+      "intro": "At GlobalSoft, we specialize in delivering advanced software solutions tailored to meet the unique needs of your business. Our expertise spans Frontend Development, Backend Development, iOS/Android Development, and Web Development. Our team provides you with seamless, high-performance digital experiences. From creating intuitive user interfaces, building robust server-side infrastructures to developing mobile and web applications, our team of experienced professionals is consistently delivers innovation and excellence.",
+      "cards": {
+        "frontend": {
+          "title": "Frontend Development",
+          "desc": "We design and develop responsive, user-friendly interfaces that deliver seamless interactions and engaging digital experiences."
+        },
+        "backend": {
+          "title": "Backend Development",
+          "desc": "We develop powerful, secure, and scalable backend systems that ensure smooth data processing, streamlined integrations, and optimal performance for your applications."
+        },
+        "web": {
+          "title": "Web Development",
+          "desc": "We create dynamic, secure, and scalable web solutions tailored to your business needs, enhancing your online presence and boosting user engagement."
+        },
+        "mobile": {
+          "title": "iOS/Android Development",
+          "desc": "We build high-performance, feature-packed mobile apps for iOS and Android, ensuring seamless functionality and user satisfaction."
+        }
+      }
+    }
   }
 }
