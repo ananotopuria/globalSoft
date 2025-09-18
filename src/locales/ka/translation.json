@@ -6,5 +6,38 @@
     "about": "ჩვენს შესახებ",
     "portfolio": "პორტფოლიო",
     "contact": "კონტაქტი"
+  },
+  "footer": {
+    "brand": "Globalsoft",
+    "tagline": "თქვენი პროგრამული უზრუნველყოფის პროვაიდერი გლობალურად",
+    "location": "ლოკაცია",
+    "address": "მარი ბროსეს #2, საქართველო",
+    "founded": "დაარსებულია საქართველოში",
+    "about": "ჩვენს შესახებ",
+    "links": {
+      "home": "მთავარი",
+      "services": "სერვისები",
+      "about": "ჩვენს შესახებ",
+      "portfolio": "პორტფოლიო",
+      "contact": "დაგვიკავშირდით"
+    },
+    "contact": {
+      "title": "კონტაქტი",
+      "phone": "032 2 033 034",
+      "email": "info@globalsoft.ge"
+    },
+    "services": {
+      "title": "ჩვენი სერვისები",
+      "frontend": "Frontend Development",
+      "backend": "Backend Development",
+      "web": "Web Development",
+      "mobile": "iOS/Android Development"
+    },
+    "policies": {
+      "title": "პოლიტიკა",
+      "terms": "წესები და პირობები",
+      "privacy": "კონფიდენციალურობის პოლიტიკა",
+      "deletion": "მონაცემების წაშლის პოლიტიკა"
+    }
   }
 }
