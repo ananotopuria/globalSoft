@@ -1,18 +1,17 @@
-import { useTranslation } from "react-i18next";
+import { DesktopNav, NavList } from "./styles";
+import NavItems from "./NavItems";
 
-function Navigation() {
-  const { t } = useTranslation();
+interface NavigationProps {
+  onLinkClick?: () => void;
+}
 
+function Navigation({ onLinkClick }: NavigationProps) {
   return (
-    <nav>
-      <ul>
-        <li>{t("nav.home")}</li>
-        <li>{t("nav.services")}</li>
-        <li>{t("nav.about")}</li>
-        <li>{t("nav.portfolio")}</li>
-        <li>{t("nav.contact")}</li>
-      </ul>
-    </nav>
+    <DesktopNav>
+      <NavList>
+        <NavItems onLinkClick={onLinkClick} />
+      </NavList>
+    </DesktopNav>
   );
 }
 

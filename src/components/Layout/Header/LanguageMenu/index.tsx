@@ -1,9 +1,10 @@
-import { useState, useRef, useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Check, Flag, Item, List, Name, Toggle, Wrapper } from "./styles";
 
 const langs = [
-  { code: "en", name: "English", flag: "🇬🇧" },
-  { code: "ka", name: "ქართული", flag: "🇬🇪" },
+  { code: "en" as const, name: "English", flag: "🇬🇧" },
+  { code: "ka" as const, name: "ქართული", flag: "🇬🇪" },
 ];
 
 export default function LanguageMenu() {
@@ -26,51 +27,42 @@ export default function LanguageMenu() {
     return () => document.removeEventListener("mousedown", onClick);
   }, []);
 
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, []);
+
   return (
-    <div ref={ref} style={{ position: "relative" }}>
-      <button onClick={() => setOpen((v) => !v)}>
-        {langs.find((l) => l.code === current)?.flag} {current.toUpperCase()} ▾
-      </button>
+    <Wrapper ref={ref}>
+      <Toggle
+        onClick={() => setOpen((v) => !v)}
+        aria-haspopup="menu"
+        aria-expanded={open}
+      >
+        <span>{langs.find((l) => l.code === current)?.flag}</span>
+        {current.toUpperCase()} ▾
+      </Toggle>
 
       {open && (
-        <ul
-          style={{
-            position: "absolute",
-            right: 0,
-            marginTop: 8,
-            background: "#fff",
-            border: "1px solid #ddd",
-            borderRadius: 8,
-            listStyle: "none",
-            padding: 6,
-            minWidth: 160,
-            boxShadow: "0 8px 18px rgba(0,0,0,.1)",
-          }}
-        >
+        <List role="menu" aria-label="Language selector">
           {langs.map((l) => (
-            <li
+            <Item
               key={l.code}
-              onClick={() => select(l.code as "en" | "ka")}
-              style={{
-                display: "flex",
-                gap: 8,
-                alignItems: "center",
-                padding: "8px 12px",
-                cursor: "pointer",
-                fontWeight: current === l.code ? 700 : 500,
-                background:
-                  current === l.code ? "rgba(0,0,0,0.05)" : "transparent",
-              }}
+              role="menuitemradio"
+              aria-checked={current === l.code}
+              onClick={() => select(l.code)}
+              $active={current === l.code}
             >
-              <span>{l.flag}</span>
-              <span style={{ flex: 1 }}>{l.name}</span>
-              {current === l.code && (
-                <span style={{ color: "#16a34a" }}>✔</span>
-              )}
-            </li>
+              <Flag>{l.flag}</Flag>
+              <Name>{l.name}</Name>
+              {current === l.code && <Check>&bull;</Check>}
+            </Item>
           ))}
-        </ul>
+        </List>
       )}
-    </div>
+    </Wrapper>
   );
 }
