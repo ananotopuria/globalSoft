@@ -1,0 +1,10 @@
+{
+  "welcomeMessage": "კეთილი იყოს თქვენი მობრძანება React და react-i18next-ში",
+  "nav": {
+    "home": "მთავარი",
+    "services": "სერვისები",
+    "about": "ჩვენს შესახებ",
+    "portfolio": "პორტფოლიო",
+    "contact": "კონტაქტი"
+  }
+}
