@@ -41,6 +41,15 @@
     }
   },
   "pages": {
+    "home": {
+      "hero": {
+        "headline": "GlobalSoft — Your Idea, Our Tech Care.",
+        "companyTitle": "Our Company",
+        "companyBody": "Founded in 2010, GlobalSoft (ID: 400006051) was established with a clear vision: to make your dreams and ambitions come true in a realistic, streamlined, and innovative way. Our mission is to contribute to local innovation and the broader technological ecosystem, while proudly supporting the global export of Georgian services. From full-cycle web and mobile app development to custom systems and reliable IT support, we offer comprehensive tech solutions. At the heart of our work are our values: fairness, professionalism, and affordability. With proven expertise in system architecture, design-oriented thinking, and complex solution engineering, we deliver tailored, high-quality results aligned with each client’s unique goals.",
+        "ctaPortfolio": "See our work",
+        "ctaContact": "Contact us"
+      }
+    },
     "whatWeDo": {
       "title": "What We Are Doing",
       "intro": "At GlobalSoft, we specialize in delivering advanced software solutions tailored to meet the unique needs of your business. Our expertise spans Frontend Development, Backend Development, iOS/Android Development, and Web Development. Our team provides you with seamless, high-performance digital experiences. From creating intuitive user interfaces, building robust server-side infrastructures to developing mobile and web applications, our team of experienced professionals is consistently delivers innovation and excellence.",
