@@ -112,6 +112,26 @@
         "hours": "Hours",
         "hours_value": "Mon–Fri, 10:00–18:00 (GMT+4)"
       }
+    },
+    "portfolio": {
+      "title": "Our Portfolio",
+      "subtitle": "Websites We Made",
+      "intro": "Explore our portfolio of expertly crafted websites, designed to deliver smooth user experiences thanks to their robust functionality and modern aesthetics. The dynamic business platforms and pioneering web applications created by our team ensure that your projects meet the highest standards of quality, performance, and innovation. Each website we develop is tailored to your unique needs and combines intuitive design with powerful technology to guarantee your success in the digital world.",
+      "visit": "Visit site",
+      "projects": {
+        "globalcellMe": {
+          "title": "GlobalCell Me",
+          "desc": "GlobalCell.me Is the ultimate personal account hub for GlobalCell users, designed and developed by our team for seamless and hassle-free global connectivity. This powerful platform empowers users to effortlessly manage their international SIM cards, top up balances, track usage in real time, and purchase the best roaming data packages - all in one intuitive dashboard."
+        },
+        "globalcellGe": {
+          "title": "GlobalCell.ge",
+          "desc": "GlobalCell.ge Is a Georgian-licensed Mobile and Fixed Telecommunication Operator as well as one of the largest distributors of international SIM cards offering European, Georgian, British, and American phone numbers with free incoming calls and affordable roaming internet packages."
+        },
+        "globalcellBusiness": {
+          "title": "GlobalCell Business",
+          "desc": "GlobalCell.Business Was developed to provide a dedicated corporate account portal, designed to simplify global telecom management for businesses. Tailored for enterprises, Globalcell.Business was carefully developed by our team to equip Globalcell users with seamless control over multiple international SIM cards, enabling effortless team-wide connectivity. Companies can allocate resources, track usage, manage top-ups, and optimize roaming plans—all from a single, intuitive platform. With powerful analytics and centralized account management, GlobalCell.Business helps businesses stay connected globally while maintaining full cost control."
+        }
+      }
     }
   }
 }
