@@ -26,6 +26,8 @@ export const Title = styled.h1`
   font-size: clamp(28px, 4vw, 44px);
   line-height: 1.15;
   margin: 0 0 16px 0;
+  font-family: "Zalando Sans SemiExpanded", sans-serif;
+  font-weight: 700;
 `;
 
 export const Intro = styled.p`

@@ -5,7 +5,6 @@ import {
   Container,
   HeaderBlock,
   Title,
-  Subtitle,
   Lead,
   ValuesGrid,
   ValueCard,
@@ -22,7 +21,6 @@ function AboutUsPageComponents() {
       <Container>
         <HeaderBlock>
           <Title>{t("pages.about.title")}</Title>
-          <Subtitle>{t("pages.about.who.title")}</Subtitle>
           <Lead>{t("pages.about.who.body")}</Lead>
         </HeaderBlock>
 
