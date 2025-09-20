@@ -25,13 +25,8 @@ export const Title = styled.h1`
   font-size: clamp(28px, 4vw, 44px);
   line-height: 1.15;
   margin: 0 0 10px 0;
-`;
-
-export const Subtitle = styled.h2`
-  font-size: clamp(18px, 2.4vw, 22px);
-  color: #6b7280;
-  margin: 0 0 14px 0;
-  font-weight: 600;
+  font-family: "Zalando Sans SemiExpanded", sans-serif;
+  font-weight: 700;
 `;
 
 export const Intro = styled.p`
@@ -42,95 +37,89 @@ export const Intro = styled.p`
 export const Grid = styled.div`
   margin-top: 10px;
   display: grid;
-  gap: 16px;
+  gap: 0;
   grid-template-columns: 1fr;
+
   @media (min-width: 640px) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px;
   }
   @media (min-width: 1024px) {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 24px;
   }
+
+  border-top: 1px solid #e5e7eb;
+  border-left: 1px solid #e5e7eb;
 `;
 
-export const Card = styled.article`
-  background: #fff;
-  border: 2px solid #e5e7eb;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-  transition: transform 180ms ease, box-shadow 180ms ease,
-    border-color 180ms ease;
-
-  &:hover {
-    border-color: #fe3b1f;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.09);
-  }
+export const Item = styled.article`
+  display: grid;
+  gap: 10px;
+  padding: 20px;
+  border-right: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
 `;
-
-export const Poster = styled.div`
+export const Poster = styled.figure`
+  margin: 0;
   width: 100%;
-  aspect-ratio: 16/9;
-  background: #f8fafc;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #f8fafb;
+
   img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
     display: block;
+    object-fit: cover;
+    transition: transform 200ms ease;
+    will-change: transform;
+  }
+
+  &:hover img {
+    transform: scale(1.03);
   }
 `;
 
 export const PosterFallback = styled.div`
   width: 100%;
-  aspect-ratio: 16/9;
+  height: 100%;
   display: grid;
   place-items: center;
-  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
-  color: #6b7280;
+  color: #9ca3af;
+`;
+
+export const Caption = styled.figcaption`
+  display: grid;
+  gap: 4px;
+`;
+
+export const ProjectTitle = styled.h3`
+  margin: 0;
+  font-size: 16px;
   font-weight: 700;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
+  line-height: 1.3;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  svg {
+    font-size: 16px;
+    transform: translateY(1px);
+  }
 `;
 
-export const CardBody = styled.div`
-  padding: 16px;
-`;
-
-export const CardTitle = styled.h3`
-  font-size: 18px;
-  margin: 0 0 8px 0;
-`;
-
-export const CardText = styled.p`
-  font-size: 15px;
+export const ProjectMeta = styled.p`
+  margin: 0;
+  font-size: 14px;
   color: #4b5563;
   line-height: 1.6;
-`;
-
-export const Actions = styled.div`
-  margin-top: 12px;
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-`;
-
-export const VisitLink = styled.a`
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 8px 12px;
-  border-radius: 10px;
-  background: #111827;
-  color: #fff;
-  border: 1px solid #111827;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 14px;
-  transition: background 160ms ease, box-shadow 160ms ease, transform 120ms ease;
-
-  &:hover {
-    background: #000;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-  }
 `;

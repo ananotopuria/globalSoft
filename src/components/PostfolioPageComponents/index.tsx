@@ -5,17 +5,14 @@ import {
   Container,
   HeaderBlock,
   Title,
-  Subtitle,
   Intro,
   Grid,
-  Card,
+  Item,
   Poster,
   PosterFallback,
-  CardBody,
-  CardTitle,
-  CardText,
-  Actions,
-  VisitLink,
+  Caption,
+  ProjectTitle,
+  ProjectMeta,
 } from "./styles";
 
 type Project = {
@@ -54,46 +51,45 @@ export default function PortfolioPageComponents() {
       <Container>
         <HeaderBlock>
           <Title>{t("pages.portfolio.title")}</Title>
-          <Subtitle>{t("pages.portfolio.subtitle")}</Subtitle>
           <Intro>{t("pages.portfolio.intro")}</Intro>
         </HeaderBlock>
 
         <Grid>
           {projects.map((p) => (
-            <Card key={p.key}>
-              {p.imgSrc ? (
-                <Poster>
+            <Item key={p.key}>
+              <Poster>
+                {p.imgSrc ? (
                   <img
                     src={p.imgSrc}
                     alt={
                       p.imgAlt || t(`pages.portfolio.projects.${p.key}.title`)
                     }
+                    loading="lazy"
                   />
-                </Poster>
-              ) : (
-                <PosterFallback aria-label="Image placeholder">
-                  infophoto
-                </PosterFallback>
-              )}
+                ) : (
+                  <PosterFallback aria-label="Image placeholder">
+                    —
+                  </PosterFallback>
+                )}
+              </Poster>
 
-              <CardBody>
-                <CardTitle>
-                  {t(`pages.portfolio.projects.${p.key}.title`)}
-                </CardTitle>
-                <CardText>
-                  {t(`pages.portfolio.projects.${p.key}.desc`)}
-                </CardText>
-
-                <Actions>
-                  {p.href && (
-                    <VisitLink href={p.href} target="_blank" rel="noreferrer">
-                      {t("pages.portfolio.visit")}{" "}
+              <Caption>
+                <ProjectTitle>
+                  {p.href ? (
+                    <a href={p.href} target="_blank" rel="noreferrer">
+                      {t(`pages.portfolio.projects.${p.key}.title`)}
                       <FiExternalLink aria-hidden />
-                    </VisitLink>
+                    </a>
+                  ) : (
+                    t(`pages.portfolio.projects.${p.key}.title`)
                   )}
-                </Actions>
-              </CardBody>
-            </Card>
+                </ProjectTitle>
+
+                <ProjectMeta>
+                  {t(`pages.portfolio.projects.${p.key}.desc`)}
+                </ProjectMeta>
+              </Caption>
+            </Item>
           ))}
         </Grid>
       </Container>
