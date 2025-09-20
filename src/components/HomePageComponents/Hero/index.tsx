@@ -4,7 +4,6 @@ import {
   HeroSection,
   HeroInner,
   Headline,
-  SubTitle,
   Body,
   Actions,
   PrimaryBtn,
@@ -19,7 +18,6 @@ export default function Hero({ bg = "/assets/hero-bg.avif" }: Props) {
     <HeroSection $bg={bg}>
       <HeroInner>
         <Headline>{t("pages.home.hero.headline")}</Headline>
-        <SubTitle>{t("pages.home.hero.companyTitle")}</SubTitle>
         <Body>{t("pages.home.hero.companyBody")}</Body>
         <Actions>
           <PrimaryBtn as={Link} to="/portfolio">

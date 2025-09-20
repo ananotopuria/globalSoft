@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import LogoImg from "../../../assets/images/logo.png";
+import LogoImg from "../../../assets/images/globalsoftlogoblack.png";
 import LanguageMenu from "./LanguageMenu";
 import Navigation from "./Navigation";
 import {

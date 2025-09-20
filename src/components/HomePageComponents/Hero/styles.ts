@@ -37,13 +37,6 @@ export const Headline = styled.h1`
   margin: 0 0 12px 0;
 `;
 
-export const SubTitle = styled.h2`
-  font-size: clamp(18px, 3vw, 24px);
-  font-weight: 600;
-  color: #d1d5db;
-  margin: 0 0 16px 0;
-`;
-
 export const Body = styled.p`
   font-size: clamp(15px, 2.2vw, 18px);
   color: #e5e7eb;
@@ -70,9 +63,6 @@ const BtnBase = styled.button`
   transition: transform 120ms ease, box-shadow 160ms ease, background 160ms ease,
     color 160ms ease;
   will-change: transform;
-  &:hover {
-    transform: translateY(-1px);
-  }
   &:focus-visible {
     outline: 2px solid #f97316;
     outline-offset: 3px;
@@ -85,6 +75,7 @@ export const PrimaryBtn = styled(BtnBase)`
   color: #fff;
   &:hover {
     background: #ef2f13;
+    border: 1px solid #fff;
   }
 `;
 

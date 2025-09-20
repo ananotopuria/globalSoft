@@ -1,3 +1,4 @@
+import AboutUsSection from "./AboutUsSection";
 import Hero from "./Hero";
 import PortfolioSection from "./PortfolioSection";
 import ServicesSection from "./ServicesSection";
@@ -8,6 +9,7 @@ function HomePageComponents() {
       <Hero />
       <ServicesSection />
       <PortfolioSection />
+      <AboutUsSection />
     </main>
   );
 }
