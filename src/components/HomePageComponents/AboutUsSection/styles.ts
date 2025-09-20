@@ -28,9 +28,10 @@ export const AboutInner = styled.div`
 export const Headline = styled.h1`
   font-size: clamp(28px, 6vw, 56px);
   line-height: 1.1;
-  font-weight: 800;
   letter-spacing: 0.2px;
   margin: 0 0 12px 0;
+  font-family: "Zalando Sans SemiExpanded", sans-serif;
+  font-weight: 700;
 `;
 
 export const Body = styled.p`

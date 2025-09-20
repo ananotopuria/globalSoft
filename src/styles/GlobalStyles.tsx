@@ -14,7 +14,7 @@ html{
 }
 
 body{
-    font-family: "Noto Sans Georgian", sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 `;
