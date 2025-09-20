@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const PageWrap = styled.main`
-  padding: 48px 16px;
+  padding: 48px 16px 0;
   @media (min-width: 768px) {
-    padding: 72px 24px;
+    padding: 72px 24px 0;
   }
 `;
 
@@ -17,6 +17,8 @@ export const Title = styled.h1`
   line-height: 1.15;
   margin: 0 0 10px 0;
   text-align: center;
+  font-family: "Zalando Sans SemiExpanded", sans-serif;
+  font-weight: 700;
 `;
 
 export const Intro = styled.p`
@@ -29,30 +31,14 @@ export const Intro = styled.p`
 
 export const Grid = styled.div`
   display: grid;
-  gap: 16px;
-  grid-template-columns: 1fr;
-  @media (min-width: 960px) {
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
-`;
-
-export const Card = styled.section`
-  border: 1px solid #e5e7eb;
-  border-radius: 16px;
-  background: #fff;
-  padding: 20px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-  transition: border-color 180ms ease, box-shadow 180ms ease;
-  &:hover {
-    border-color: #fe3b1f;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.09);
-  }
+  gap: 28px;
 `;
 
 export const Form = styled.form`
   display: grid;
   gap: 12px;
+  max-width: 700px;
+  margin-inline: auto;
 `;
 
 export const Field = styled.div`
@@ -135,14 +121,18 @@ export const Note = styled.p`
   color: #6b7280;
 `;
 
+export const InfoList = styled.div`
+  display: grid;
+  gap: 12px;
+  max-width: 700px;
+  margin-inline: auto;
+`;
+
 export const InfoRow = styled.div`
   display: grid;
   grid-template-columns: 32px 1fr;
   align-items: start;
   gap: 10px;
-  &:not(:last-child) {
-    margin-bottom: 12px;
-  }
 `;
 
 export const IconBox = styled.div`
@@ -168,14 +158,17 @@ export const Value = styled.div`
   }
 `;
 
-export const MapBox = styled.div`
-  margin-top: 16px;
-  border-radius: 12px;
+export const MapStrip = styled.div`
+  margin-top: 24px;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
   overflow: hidden;
-  border: 1px solid #e5e7eb;
+
   iframe {
     width: 100%;
-    height: 240px;
+    height: 420px;
     border: 0;
     display: block;
   }

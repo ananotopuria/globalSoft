@@ -2,26 +2,26 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { FiMail, FiPhone, FiMapPin, FiClock } from "react-icons/fi";
 import {
-  PageWrap,
-  Container,
-  Title,
-  Intro,
-  Grid,
-  Card,
-  InfoRow,
-  IconBox,
-  Label,
-  Value,
-  Form,
-  Field,
-  Input,
-  Textarea,
   Actions,
   Button,
-  Note,
-  Status,
-  MapBox,
+  Container,
+  Field,
+  Form,
+  Grid,
   HiddenHoneypot,
+  IconBox,
+  InfoList,
+  InfoRow,
+  Input,
+  Intro,
+  Label,
+  MapStrip,
+  Note,
+  PageWrap,
+  Status,
+  Textarea,
+  Title,
+  Value,
 } from "./styles";
 
 type StatusType = "idle" | "loading" | "success" | "error";
@@ -58,7 +58,7 @@ export default function ContactPageComponents() {
         <Intro>{t("pages.contact.intro")}</Intro>
 
         <Grid>
-          <Card aria-labelledby="contact-form">
+          <section aria-labelledby="contact-form">
             <h2 id="contact-form" style={{ position: "absolute", left: -9999 }}>
               Form
             </h2>
@@ -156,67 +156,70 @@ export default function ContactPageComponents() {
 
               <Note>{t("pages.contact.note")}</Note>
             </Form>
-          </Card>
+          </section>
 
-          <Card aria-labelledby="contact-info">
+          {/* INFO */}
+          <section aria-labelledby="contact-info">
             <h2 id="contact-info" style={{ position: "absolute", left: -9999 }}>
               Info
             </h2>
 
-            <InfoRow>
-              <IconBox>
-                <FiMail />
-              </IconBox>
-              <div>
-                <Label>{t("pages.contact.info.email")}</Label>
-                <Value>
-                  <a href="mailto:info@globalsoft.ge">info@globalsoft.ge</a>
-                </Value>
-              </div>
-            </InfoRow>
+            <InfoList>
+              <InfoRow>
+                <IconBox>
+                  <FiMail />
+                </IconBox>
+                <div>
+                  <Label>{t("pages.contact.info.email")}</Label>
+                  <Value>
+                    <a href="mailto:info@globalsoft.ge">info@globalsoft.ge</a>
+                  </Value>
+                </div>
+              </InfoRow>
 
-            <InfoRow>
-              <IconBox>
-                <FiPhone />
-              </IconBox>
-              <div>
-                <Label>{t("pages.contact.info.phone")}</Label>
-                <Value>
-                  <a href="tel:+995322033034">032 2 033 034</a>
-                </Value>
-              </div>
-            </InfoRow>
+              <InfoRow>
+                <IconBox>
+                  <FiPhone />
+                </IconBox>
+                <div>
+                  <Label>{t("pages.contact.info.phone")}</Label>
+                  <Value>
+                    <a href="tel:+995322033034">032 2 033 034</a>
+                  </Value>
+                </div>
+              </InfoRow>
 
-            <InfoRow>
-              <IconBox>
-                <FiMapPin />
-              </IconBox>
-              <div>
-                <Label>{t("pages.contact.info.address")}</Label>
-                <Value>Mari Broses #2, Georgia</Value>
-              </div>
-            </InfoRow>
+              <InfoRow>
+                <IconBox>
+                  <FiMapPin />
+                </IconBox>
+                <div>
+                  <Label>{t("pages.contact.info.address")}</Label>
+                  <Value>Mari Broses #2, Georgia</Value>
+                </div>
+              </InfoRow>
 
-            <InfoRow>
-              <IconBox>
-                <FiClock />
-              </IconBox>
-              <div>
-                <Label>{t("pages.contact.info.hours")}</Label>
-                <Value>{t("pages.contact.info.hours_value")}</Value>
-              </div>
-            </InfoRow>
-
-            <MapBox aria-label="Map">
-              <iframe
-                title="GlobalSoft office location"
-                src="https://maps.google.com/maps?q=Mari%20Broses%202%20Georgia&z=14&output=embed"
-                loading="lazy"
-              />
-            </MapBox>
-          </Card>
+              <InfoRow>
+                <IconBox>
+                  <FiClock />
+                </IconBox>
+                <div>
+                  <Label>{t("pages.contact.info.hours")}</Label>
+                  <Value>{t("pages.contact.info.hours_value")}</Value>
+                </div>
+              </InfoRow>
+            </InfoList>
+          </section>
         </Grid>
       </Container>
+
+      <MapStrip aria-label="Map">
+        <iframe
+          title="GlobalSoft office location"
+          src="https://maps.google.com/maps?q=Mari%20Broses%202%20Georgia&z=14&output=embed"
+          loading="lazy"
+        />
+      </MapStrip>
     </PageWrap>
   );
 }
