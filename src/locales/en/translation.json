@@ -69,6 +69,15 @@
             "body": "We build high-performance, feature-packed mobile apps for iOS and Android, ensuring seamless functionality and user satisfaction."
           }
         ]
+      },
+      "portfolioTeaser": {
+        "title": "Websites We  Made",
+        "body": "Explore our portfolio of expertly crafted websites, designed to deliver smooth user experiences thanks to their robust functionality and modern aesthetics.",
+        "primary": { "label": "See Our Projects", "href": "/portfolio#report" },
+        "secondary": {
+          "label": "Contact Us",
+          "href": "/portfolio#data"
+        }
       }
     },
     "whatWeDo": {
